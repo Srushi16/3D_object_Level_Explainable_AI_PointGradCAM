@@ -1,0 +1,176 @@
+{
+  "sample_idx": 62,
+  "num_points": 16384,
+  "objects_per_class": {
+    "Car": 2,
+    "Pedestrian": 4,
+    "Cyclist": 0
+  },
+  "filters": {
+    "min_score": 0.1,
+    "min_points_in_box": 10
+  },
+  "metrics": {
+    "alpha": 0.05,
+    "focus_expand": 1.6,
+    "iou_thr": 0.1,
+    "deletion_fracs": [
+      0.0,
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "n_target": 0,
+    "fixed_eval_subset": false,
+    "note_auc": "AUC is remaining score vs fraction removed; LOWER is better."
+  },
+  "detections": [
+    {
+      "det_idx": 0,
+      "class_name": "Car",
+      "score": 0.9999662637710571,
+      "points_in_box": 309,
+      "roi_idx": 0,
+      "target_logit": 8.57017993927002,
+      "pooled_frame": "world",
+      "folder": "Car/det000_score1p000",
+      "ply": "Car/det000_score1p000/heatmap.ply",
+      "npz": "Car/det000_score1p000/heatmap.npz",
+      "dbg": "Car/det000_score1p000/debug.npz",
+      "metrics": {
+        "alpha": 0.05,
+        "focus_expand": 1.6,
+        "iou_thr": 0.1,
+        "n_target": 0,
+        "fixed_eval_subset": false,
+        "focus_ratio": 0.9999776306263568,
+        "sparsity": 0.10364681507254787,
+        "delta_s_alpha": 0.9999662637710571,
+        "deletion_auc": 0.029957983642816544
+      }
+    },
+    {
+      "det_idx": 1,
+      "class_name": "Pedestrian",
+      "score": 0.9969018697738647,
+      "points_in_box": 55,
+      "roi_idx": 51,
+      "target_logit": 5.607895374298096,
+      "pooled_frame": "world",
+      "folder": "Pedestrian/det001_score0p997",
+      "ply": "Pedestrian/det001_score0p997/heatmap.ply",
+      "npz": "Pedestrian/det001_score0p997/heatmap.npz",
+      "dbg": "Pedestrian/det001_score0p997/debug.npz",
+      "metrics": {
+        "alpha": 0.05,
+        "focus_expand": 1.6,
+        "iou_thr": 0.1,
+        "n_target": 0,
+        "fixed_eval_subset": false,
+        "focus_ratio": 0.9955090440222786,
+        "sparsity": 0.13087957787693452,
+        "delta_s_alpha": 0.9969018697738647,
+        "deletion_auc": 0.004984509199857712
+      }
+    },
+    {
+      "det_idx": 2,
+      "class_name": "Pedestrian",
+      "score": 0.9868453741073608,
+      "points_in_box": 89,
+      "roi_idx": 62,
+      "target_logit": 3.3641254901885986,
+      "pooled_frame": "world",
+      "folder": "Pedestrian/det002_score0p987",
+      "ply": "Pedestrian/det002_score0p987/heatmap.ply",
+      "npz": "Pedestrian/det002_score0p987/heatmap.npz",
+      "dbg": "Pedestrian/det002_score0p987/debug.npz",
+      "metrics": {
+        "alpha": 0.05,
+        "focus_expand": 1.6,
+        "iou_thr": 0.1,
+        "n_target": 0,
+        "fixed_eval_subset": false,
+        "focus_ratio": 0.9681735634720279,
+        "sparsity": 0.10219823745893357,
+        "delta_s_alpha": 0.9868453741073608,
+        "deletion_auc": 0.0
+      }
+    },
+    {
+      "det_idx": 3,
+      "class_name": "Pedestrian",
+      "score": 0.9296974539756775,
+      "points_in_box": 52,
+      "roi_idx": 56,
+      "target_logit": 2.5820508003234863,
+      "pooled_frame": "world",
+      "folder": "Pedestrian/det003_score0p930",
+      "ply": "Pedestrian/det003_score0p930/heatmap.ply",
+      "npz": "Pedestrian/det003_score0p930/heatmap.npz",
+      "dbg": "Pedestrian/det003_score0p930/debug.npz",
+      "metrics": {
+        "alpha": 0.05,
+        "focus_expand": 1.6,
+        "iou_thr": 0.1,
+        "n_target": 0,
+        "fixed_eval_subset": false,
+        "focus_ratio": 0.999977702736943,
+        "sparsity": 0.09404012739538177,
+        "delta_s_alpha": 0.9296974539756775,
+        "deletion_auc": 0.0
+      }
+    },
+    {
+      "det_idx": 4,
+      "class_name": "Pedestrian",
+      "score": 0.7587567567825317,
+      "points_in_box": 35,
+      "roi_idx": 99,
+      "target_logit": 1.1458754539489746,
+      "pooled_frame": "world",
+      "folder": "Pedestrian/det004_score0p759",
+      "ply": "Pedestrian/det004_score0p759/heatmap.ply",
+      "npz": "Pedestrian/det004_score0p759/heatmap.npz",
+      "dbg": "Pedestrian/det004_score0p759/debug.npz",
+      "metrics": {
+        "alpha": 0.05,
+        "focus_expand": 1.6,
+        "iou_thr": 0.1,
+        "n_target": 0,
+        "fixed_eval_subset": false,
+        "focus_ratio": 1.0,
+        "sparsity": 0.09788400528213904,
+        "delta_s_alpha": 0.7587567567825317,
+        "deletion_auc": 0.0
+      }
+    },
+    {
+      "det_idx": 5,
+      "class_name": "Car",
+      "score": 0.7001895308494568,
+      "points_in_box": 18,
+      "roi_idx": 47,
+      "target_logit": 0.8482004404067993,
+      "pooled_frame": "world",
+      "folder": "Car/det005_score0p700",
+      "ply": "Car/det005_score0p700/heatmap.ply",
+      "npz": "Car/det005_score0p700/heatmap.npz",
+      "dbg": "Car/det005_score0p700/debug.npz",
+      "metrics": {
+        "alpha": 0.05,
+        "focus_expand": 1.6,
+        "iou_thr": 0.1,
+        "n_target": 0,
+        "fixed_eval_subset": false,
+        "focus_ratio": 1.0,
+        "sparsity": 0.0950612527231239,
+        "delta_s_alpha": 0.7001895308494568,
+        "deletion_auc": 0.0
+      }
+    }
+  ]
+}

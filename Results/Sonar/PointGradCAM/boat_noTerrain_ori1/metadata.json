@@ -1,0 +1,26 @@
+{
+  "sample": "boat_noTerrain_ori1",
+  "sonar_npy": "/netscratch/rsonawane/ex_ai/OpenPCDet/data/sonarcloud/recon_out/boat_noTerrain_ori1.npy",
+  "mode": "objectness",
+  "act_layer": "roi_head.merge_down_layer",
+  "selected_roi": 97,
+  "target_logit": -6.5642571449279785,
+  "keep_rois_in_region": 52,
+  "target_region": "radius",
+  "region_expand": 1.3,
+  "region_radius": 5.0,
+  "mapping": {
+    "mode": "radius",
+    "k": 20,
+    "radius": 1.2,
+    "sigma": 0.6,
+    "max_neighbors": 1024,
+    "agg": "sum",
+    "clip_percentile": 99.5
+  },
+  "outputs": {
+    "ply": "gradcam_objectness.ply",
+    "npz": "gradcam_objectness.npz",
+    "debug": "gradcam_objectness_debug.npz"
+  }
+}

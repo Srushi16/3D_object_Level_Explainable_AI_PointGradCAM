@@ -1,0 +1,32 @@
+{
+  "sample": "boat_noTerrain_ori1",
+  "sonar_npy": "/netscratch/rsonawane/ex_ai/OpenPCDet/data/sonarcloud/recon_out/boat_noTerrain_ori1.npy",
+  "recon_summary_csv": "/netscratch/rsonawane/ex_ai/OpenPCDet/data/sonarcloud/recon_out/recon_summary.csv",
+  "num_points_after_transform": 9856,
+  "num_clusters": 256,
+  "num_perturbs": 200,
+  "fixed_n": 10000,
+  "score_thresh_forced": 1e-06,
+  "base_scalar": 0.0014078860403969884,
+  "base_hits": 4,
+  "y_min": 0.0,
+  "y_mean": 0.00448021711781621,
+  "y_max": 0.14230480790138245,
+  "region_hits_zero_frac": 0.015,
+  "r2": 0.9924041654776076,
+  "intercept": 0.024570902809500694,
+  "target_region": "global",
+  "target_class": "any",
+  "region_expand": 1.3,
+  "region_radius": 6.0,
+  "snapped_center": [
+    24.916751861572266,
+    9.572237014770508,
+    13.15544605255127
+  ],
+  "snapped_lwh": [
+    21.146169662475586,
+    2.0821924209594727,
+    16.113027572631836
+  ]
+}

@@ -1,0 +1,126 @@
+PointGrad-CAM (OpenPCDet / PointRCNN) — Per-detection Export + Metrics
+=====================================================================
+
+This pipeline generates Grad-CAM saliency for 3D point clouds using PointRCNN
+(OpenPCDet). It computes per-detection object-level explanation maps and
+evaluation metrics:
+
+- Focus Ratio
+- Sparsity@alpha
+- Faithfulness ΔScore@alpha
+- Deletion Curve + AUC
+
+
+------------------------------------------------------------
+1) Outputs (per sample)
+------------------------------------------------------------
+
+All outputs are written under:
+
+    --outdir/sample_XXXXXX/
+
+Files:
+    metadata.json
+    detections.csv
+    metrics_summary.csv        (compatible with plot_xai_metrics.py)
+
+Per detection:
+    sample_XXXXXX/<ClassName>/detYYY_scoreZ/heatmap.npz
+    (optional) heatmap.ply
+    (optional) debug.npz
+
+heatmap.npz contains:
+    points          (N,3)
+    scores          (N,)
+    colors          (N,3)
+
+And also includes the metric fields and deletion arrays:
+    focus_ratio
+    sparsity
+    baseline_eval
+    delta_s_alpha
+    deletion_fracs
+    deletion_scores
+    deletion_auc
+
+
+------------------------------------------------------------
+2) Required input format
+------------------------------------------------------------
+
+Point cloud format:
+    float32 (N,4) = (x, y, z, intensity)
+
+Two supported input modes:
+
+A) Raw single frame:
+    Provide a KITTI velodyne .bin file using:
+        --raw-bin /path/to/000062.bin
+
+B) Dataset mode (recommended):
+    Provide KITTI root and infos using the dataset loader (KittiZipDataset / KITTI folders).
+
+Dataset mode expects:
+    --kitti /path/to/KITTI
+and that KITTI info files exist (recommended):
+    /path/to/KITTI/Kitti_infos/kitti_infos_<split>.pkl
+
+
+------------------------------------------------------------
+3) YAML files needed
+------------------------------------------------------------
+
+Model YAML (required to build PointRCNN):
+    tools/cfgs/kitti_models/pointrcnn.yaml
+
+Dataset YAML (referenced by the model config):
+    tools/cfgs/dataset_configs/kitti_dataset.yaml
+
+Make sure in the dataset YAML:
+- DATA_PATH points to your KITTI root (or is overridden by --kitti)
+- INFO_PATH points to generated kitti_infos_*.pkl files
+- DATA_SPLIT is correctly set for train/val/test
+
+
+------------------------------------------------------------
+4) Run (example)
+------------------------------------------------------------
+
+Example (dataset mode):
+
+    python run_gradcam_metrics.py \
+        --cfg tools/cfgs/kitti_models/pointrcnn.yaml \
+        --ckpt checkpoints/pointrcnn_7870.pth \
+        --kitti /path/to/KITTI \
+        --sample 62 \
+        --outdir /path/to/gradcam_results \
+        --act-layer roi_head.merge_down_layer
+
+
+------------------------------------------------------------
+5) Paths you must update
+------------------------------------------------------------
+
+--cfg      : path to PointRCNN YAML config
+--ckpt     : path to trained checkpoint (.pth)
+--kitti    : KITTI dataset root directory
+--outdir   : output folder where results will be written
+
+If using raw frame mode:
+--raw-bin  : path to a single KITTI velodyne .bin file
+
+
+------------------------------------------------------------
+6) Notes / Common pitfalls
+------------------------------------------------------------
+
+- This script runs the model on GPU (CUDA). Ensure torch.cuda.is_available() is True.
+- Grad-CAM uses the specified activation layer (--act-layer). If the layer name is wrong,
+  Grad-CAM will fail or output empty saliency.
+- If baseline_eval becomes 0.0, strict matching failed for that detection during evaluation
+  (often happens for unstable / low-score detections).
+- Metrics are most stable when you keep:
+  - fixed number of evaluation points (e.g., padding/downsampling deterministically)
+  - strict matching settings consistent across methods
+
+You are now ready to generate PointGrad-CAM explanations and metrics.

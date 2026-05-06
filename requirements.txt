@@ -1,0 +1,17 @@
+numpy<2
+llvmlite
+numba
+torch>=1.1
+tensorboardX
+easydict
+pyyaml
+scikit-image
+tqdm
+torchvision
+SharedArray
+opencv-python-headless==4.5.5.64
+pyquaternion
+av2
+spconv
+pandas
+lime

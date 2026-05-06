@@ -1,0 +1,7 @@
+sample_idx,det_idx,class_name,pred_score,metrics_alpha,focus_expand,iou_thr,focus_ratio,sparsity,delta_s_alpha,deletion_auc,npz_path
+62,0,Car,0.9999662637710571,0.05,1.6,0.1,0.9999776306263568,0.10364681507254787,0.9999662637710571,0.029957983642816544,/netscratch/rsonawane/ex_ai/OpenPCDet/gradcam_out_metrics_new/sample_000062/Car/det000_score1p000/heatmap.npz
+62,1,Pedestrian,0.9969018697738647,0.05,1.6,0.1,0.9955090440222786,0.13087957787693452,0.9969018697738647,0.004984509199857712,/netscratch/rsonawane/ex_ai/OpenPCDet/gradcam_out_metrics_new/sample_000062/Pedestrian/det001_score0p997/heatmap.npz
+62,2,Pedestrian,0.9868453741073608,0.05,1.6,0.1,0.9681735634720279,0.10219823745893357,0.9868453741073608,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/gradcam_out_metrics_new/sample_000062/Pedestrian/det002_score0p987/heatmap.npz
+62,3,Pedestrian,0.9296974539756775,0.05,1.6,0.1,0.999977702736943,0.09404012739538177,0.9296974539756775,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/gradcam_out_metrics_new/sample_000062/Pedestrian/det003_score0p930/heatmap.npz
+62,4,Pedestrian,0.7587567567825317,0.05,1.6,0.1,1.0,0.09788400528213904,0.7587567567825317,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/gradcam_out_metrics_new/sample_000062/Pedestrian/det004_score0p759/heatmap.npz
+62,5,Car,0.7001895308494568,0.05,1.6,0.1,1.0,0.0950612527231239,0.7001895308494568,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/gradcam_out_metrics_new/sample_000062/Car/det005_score0p700/heatmap.npz

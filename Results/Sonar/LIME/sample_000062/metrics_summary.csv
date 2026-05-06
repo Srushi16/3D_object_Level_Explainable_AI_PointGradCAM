@@ -1,0 +1,8 @@
+sample_idx,class_name,det_idx,pred_score,metrics_alpha,focus_expand,iou_thr,focus_ratio,sparsity,delta_s_alpha,deletion_auc,npz_path
+62,Car,0,0.9998277425765991,0.05,1.6,0.5,0.999720345077446,0.9999588457537031,0.9998277425765991,0.02997848019003868,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Car/det000/explanation.npz
+62,Pedestrian,1,0.9943323135375977,0.05,1.6,0.5,0.4042056198684847,1.000000069785677,0.9943323135375977,0.004971661604940891,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Pedestrian/det001/explanation.npz
+62,Pedestrian,2,0.9464160799980164,0.05,1.6,0.5,0.3924399217845245,1.0000000666639468,0.9464160799980164,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Pedestrian/det002/explanation.npz
+62,Pedestrian,3,0.8746256232261658,0.05,1.6,0.5,0.32619534371120246,1.0,0.8746256232261658,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Pedestrian/det003/explanation.npz
+62,Pedestrian,4,0.8548609614372253,0.05,1.6,0.5,0.915467663687453,1.0,0.8548609614372253,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Pedestrian/det004/explanation.npz
+62,Car,5,0.7886882424354553,0.05,1.6,0.5,0.34009133432286337,1.0,0.7886882424354553,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Car/det005/explanation.npz
+62,Car,6,0.33004993200302124,0.05,1.6,0.5,0.24994318675480842,1.0,0.33004993200302124,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics/sample_000062/Car/det006/explanation.npz

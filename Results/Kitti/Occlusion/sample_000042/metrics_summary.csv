@@ -1,0 +1,6 @@
+sample_idx,class_name,det_idx,pred_score,baseline_eval,metrics_alpha,focus_expand,iou_thr,focus_ratio,sparsity,delta_s_alpha,deletion_auc,npz_path
+42,Car,0,0.9999995231628418,0.9999995231628418,0.05,1.6,0.5,0.54220993030891,0.11937745149032528,0.9999995231628418,0.0049999975599348545,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics_new/sample_000042/Car/det000/explanation.npz
+42,Car,1,0.9999991655349731,0.0,0.05,1.6,0.5,0.701052671376012,0.08885289852671238,0.0,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics_new/sample_000042/Car/det001/explanation.npz
+42,Car,2,0.9999971389770508,0.0,0.05,1.6,0.5,0.5279153926892439,0.08644528221073819,0.0,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics_new/sample_000042/Car/det002/explanation.npz
+42,Car,3,0.9632269740104675,0.0,0.05,1.6,0.5,0.39190793507312643,0.08052359763514558,0.0,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics_new/sample_000042/Car/det003/explanation.npz
+42,Car,4,0.7536607384681702,0.0,0.05,1.6,0.5,0.9872774233400602,0.11959290491952557,0.0,0.0,/netscratch/rsonawane/ex_ai/OpenPCDet/occlusion_xai/metrics_new/sample_000042/Car/det004/explanation.npz
